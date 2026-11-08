@@ -5,9 +5,9 @@
 
 /* ---------- Font (self-hosted, nessuna chiamata esterna) ---------- */
 @font-face {
-  font-family: "Bodoni Moda";
-  src: url("../fonts/bodoni-moda-latin-opsz-normal.woff2") format("woff2");
-  font-weight: 400 900;
+  font-family: "EB Garamond";
+  src: url("../fonts/eb-garamond-latin-wght-normal.woff2") format("woff2");
+  font-weight: 400 800;
   font-style: normal;
   font-display: swap;
 }
@@ -53,7 +53,7 @@
   --bg-feature: linear-gradient(rgba(237, 228, 214, .72), rgba(237, 228, 214, .72)), url("../img/texture-travertino.webp") center / 720px repeat;
   --bg-soft: linear-gradient(rgba(245, 239, 230, .55), rgba(245, 239, 230, .55)), url("../img/texture-intonaco.webp") center / 720px repeat;
 
-  --serif: "Bodoni Moda", "Didot", "Bodoni 72", Georgia, serif;
+  --serif: "EB Garamond", "Garamond", "Iowan Old Style", Georgia, serif;
   --sans: "Jost", "Futura", "Century Gothic", system-ui, sans-serif;
 
   --wrap: 76rem;
@@ -98,16 +98,16 @@ a:hover { color: var(--terra); }
 
 h1, h2, h3, h4 {
   font-family: var(--serif);
-  font-weight: 400;
+  font-weight: 500;
   color: var(--terra);
-  line-height: 1.12;
+  line-height: 1.1;
   margin: 0 0 .6em;
   letter-spacing: -.005em;
   text-wrap: balance;
 }
-h1 { font-size: clamp(2.5rem, 4.2vw + 1rem, 4.75rem); line-height: 1.04; }
-h2 { font-size: clamp(1.95rem, 2.4vw + 1rem, 3.1rem); }
-h3 { font-size: clamp(1.35rem, .6vw + 1.1rem, 1.65rem); line-height: 1.2; }
+h1 { font-size: clamp(2.75rem, 4.6vw + 1rem, 5.2rem); line-height: 1.02; }
+h2 { font-size: clamp(2.1rem, 2.6vw + 1rem, 3.35rem); }
+h3 { font-size: clamp(1.45rem, .6vw + 1.2rem, 1.8rem); line-height: 1.2; }
 p { margin: 0 0 1.1em; max-width: var(--wrap-text); text-wrap: pretty; }
 ul, ol { padding-left: 1.2em; }
 strong { font-weight: 500; color: var(--terra); }
@@ -202,7 +202,7 @@ strong { font-weight: 500; color: var(--terra); }
 .site-nav > ul > li { border-bottom: 1px solid color-mix(in srgb, var(--travertino) 50%, transparent); }
 .site-nav > ul > li > a, .nav-sub-toggle {
   display: block; width: 100%; text-align: left; padding: 1rem 0;
-  font: 400 1.65rem/1.2 var(--serif); background: none; border: 0; cursor: pointer;
+  font: 500 1.75rem/1.2 var(--serif); background: none; border: 0; cursor: pointer;
 }
 .site-nav .nav-sub { padding: 0 0 1rem 0; }
 .nav-sub a { display: block; padding: .45rem 0; font-size: 1.1rem; }
@@ -269,7 +269,7 @@ strong { font-weight: 500; color: var(--terra); }
 .statement .pict { --pw: 4.5rem; margin-bottom: 2rem; }
 .statement__text {
   font-family: var(--serif); color: var(--terra);
-  font-size: clamp(1.55rem, 1.9vw + 1rem, 2.5rem); line-height: 1.32;
+  font-size: clamp(1.7rem, 2vw + 1.05rem, 2.7rem); line-height: 1.3; font-weight: 500;
   max-width: 50rem; margin: 0 auto;
 }
 
@@ -310,10 +310,10 @@ strong { font-weight: 500; color: var(--terra); }
 .steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 2.25rem; counter-reset: step; }
 .step { position: relative; padding-top: 1.4rem; border-top: 1px solid var(--travertino); counter-increment: step; }
 .step::before {
-  content: counter(step); display: block; font-family: var(--serif); font-size: 2.6rem; line-height: 1;
+  content: counter(step); display: block; font-family: var(--serif); font-weight: 500; font-size: 2.8rem; line-height: 1;
   color: var(--rovere); margin-bottom: .9rem;
 }
-.step h3 { font-size: 1.35rem; margin-bottom: .45rem; }
+.step h3 { font-size: 1.45rem; margin-bottom: .45rem; }
 .step p { font-size: 1rem; margin: 0; }
 @media (min-width: 44em) { .steps { grid-template-columns: repeat(2, 1fr); gap: 2.5rem 2rem; } }
 @media (min-width: 64em) {
@@ -360,7 +360,7 @@ strong { font-weight: 500; color: var(--terra); }
 .reasons { margin: 0; }
 .reasons div { padding: 1.1rem 0; border-bottom: 1px solid color-mix(in srgb, var(--travertino) 60%, transparent); }
 .reasons div:first-child { border-top: 1px solid color-mix(in srgb, var(--travertino) 60%, transparent); }
-.reasons dt { font-family: var(--serif); font-size: 1.25rem; color: var(--terra); margin-bottom: .2rem; }
+.reasons dt { font-family: var(--serif); font-weight: 500; font-size: 1.35rem; color: var(--terra); margin-bottom: .2rem; }
 .reasons dd { margin: 0; font-size: 1rem; }
 
 .costs { display: grid; gap: 2.5rem; }
@@ -383,7 +383,7 @@ strong { font-weight: 500; color: var(--terra); }
 .faq details:first-of-type { border-top: 1px solid color-mix(in srgb, var(--rovere) 35%, transparent); }
 .faq summary {
   list-style: none; cursor: pointer; position: relative;
-  padding: 1.3rem 2.5rem 1.3rem 0; font-family: var(--serif); font-size: clamp(1.15rem, .4vw + 1.05rem, 1.35rem); color: var(--terra); line-height: 1.3;
+  padding: 1.3rem 2.5rem 1.3rem 0; font-family: var(--serif); font-size: clamp(1.25rem, .4vw + 1.15rem, 1.45rem); font-weight: 500; color: var(--terra); line-height: 1.3;
 }
 .faq summary::-webkit-details-marker { display: none; }
 .faq summary::after {
@@ -433,7 +433,7 @@ strong { font-weight: 500; color: var(--terra); }
 /* ---------- Metodo: fasi alternate ---------- */
 .phase { display: grid; gap: 2rem; align-items: center; padding-block: clamp(2.5rem, 5vw, 4rem); }
 .phase + .phase { border-top: 1px solid color-mix(in srgb, var(--travertino) 60%, transparent); }
-.phase__num { font-family: var(--serif); font-size: 3.5rem; line-height: 1; color: var(--rovere); display: block; margin-bottom: .75rem; }
+.phase__num { font-family: var(--serif); font-weight: 500; font-size: 3.8rem; line-height: 1; color: var(--rovere); display: block; margin-bottom: .75rem; }
 .phase__media img { width: 100%; aspect-ratio: 1; object-fit: cover; max-width: 30rem; }
 @media (min-width: 56em) {
   .phase { grid-template-columns: 1fr 1fr; gap: clamp(3rem, 7vw, 6rem); }
